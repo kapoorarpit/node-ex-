@@ -1,8 +1,8 @@
-/* lecture 1 module------------------------------------------------------------------------------------*/
+/* lecture 1 module------------------------------------------------------------------------------------
 const sum=(num1,num2)=>(num1+num2);
 
 module.exports={sum: sum};
-/* lecture 2 event listener----------------------------------------------------------------------------*/
+/* lecture 2 event listener----------------------------------------------------------------------------
 const EventE = require('events');
 const eventE = new EventE();
 
@@ -12,7 +12,7 @@ eventE.on('tutorial',(num1,num2)=>{
 
 eventE.emit('tutorial',1,2);
 
-/* lecture 2 eventlistener and class--------------------------------------------------------------------*/
+/* lecture 2 eventlistener and class--------------------------------------------------------------------
 class person extends EventE{
     constructor(name)
     {
@@ -41,7 +41,7 @@ christina.on('name',()=>{
 })
 christina.emit('name');
 
-/* lecture 3 readline-----------------------------------------------------------------------------------*/
+/* lecture 3 readline-----------------------------------------------------------------------------------
 
 const readline= require('readline');
 
@@ -70,7 +70,6 @@ rl.on('close',()=>{
 /*lecture 4 filesystem------------------------------------------------------------------------------*/
 
 const fs= require('fs');
-const { compileFunction } = require('node:vm');
 
 fs.writeFile('example.txt',"this is an example",(err)=>
 {
@@ -87,3 +86,10 @@ fs.writeFile('example.txt',"this is an example",(err)=>
 })
 
 /* leture 5 directory-----------------------------------------------------------------------------*/
+
+fs.mkdir('foledr',(err)=>{
+    if(err)
+    console.log(err);
+    else
+    console.log("sucess");
+})
