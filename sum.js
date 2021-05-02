@@ -85,11 +85,33 @@ fs.writeFile('example.txt',"this is an example",(err)=>
     })}
 })
 
-/* leture 5 directory-----------------------------------------------------------------------------*/
+/* leture 5 directory-----------------------------------------------------------------------------
 
-fs.mkdir('foledr',(err)=>{
+/*fs.mkdir('foledr',(err)=>{
     if(err)
     console.log(err);
-    else
-    console.log("sucess");
+    else{
+        fs.writeFile('./foledr/example.txt',"this is an ",(err)=>{
+        if(err)
+        console.log(err);
+        else{
+        console.log('file successful');
+        }})
+    }});
+
+fs.readdir('foledr',(er,file)=>{
+    if(er)
+    console.log(er)
+    else{
+        console.log(file)
+    }
 })
+
+/*lecture 6 streams--------------------------------------------------------------*/
+
+const read=fs.createReadStream('./example.txt');
+const writestream = fs.createWriteStream('./exapl.txt');
+
+read.on('data',(chu)=>{
+    writestream.write(chu);
+});
