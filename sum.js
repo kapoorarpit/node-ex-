@@ -67,7 +67,7 @@ rl.on('close',()=>{
     console.log('correct!!');
 })
 
-/*lecture 4 filesystem------------------------------------------------------------------------------*/
+/*lecture 4 filesystem------------------------------------------------------------------------------
 
 const fs= require('fs');
 
@@ -107,7 +107,7 @@ fs.readdir('foledr',(er,file)=>{
     }
 })
 
-/*lecture 6 streams--------------------------------------------------------------*/
+/*lecture 6 streams--------------------------------------------------------------*
 
 const read=fs.createReadStream('./example.txt');
 const writestream = fs.createWriteStream('./exapl.txt');
@@ -115,3 +115,14 @@ const writestream = fs.createWriteStream('./exapl.txt');
 read.on('data',(chu)=>{
     writestream.write(chu);
 });
+
+/* lecture 7 pipe-----------------------------------------------------------------
+const fs= require('fs')
+const ReadStream= fs.createReadStream('./example.txt');
+const writestrea= fs.createReadStream('./r.txt');
+ReadStream.pipe(writestrea);
+
+//gzip to create a zip file threw pipe
+//Gunzip to uncompress a zip file
+
+/*lecture 8 HTTps -------------------------------------------------------------------*/
