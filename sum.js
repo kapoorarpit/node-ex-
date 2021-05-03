@@ -125,4 +125,16 @@ ReadStream.pipe(writestrea);
 //gzip to create a zip file threw pipe
 //Gunzip to uncompress a zip file
 
-/*lecture 8 HTTps -------------------------------------------------------------------*/
+/*lecture 8 HTTp-------------------------------------------------------------------------*/
+
+const http = require('http');
+const server = http.createServer((req,res)=>{
+    if(req.url=='/')
+    {res.write("bhot harami hote hai '*baniye*'");}
+    res.write("hello beti");    
+    res.end();// response sent
+});
+
+server.listen('3000');
+
+
