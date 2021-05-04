@@ -125,7 +125,7 @@ ReadStream.pipe(writestrea);
 //gzip to create a zip file threw pipe
 //Gunzip to uncompress a zip file
 
-/*lecture 8 HTTp-------------------------------------------------------------------------*/
+/*lecture 8 HTTp-------------------------------------------------------------------------
 
 const http = require('http');
 const server = http.createServer((req,res)=>{
@@ -137,4 +137,14 @@ const server = http.createServer((req,res)=>{
 
 server.listen('3000');
 
+/*lecture 9 express---------------------------------------------------------------------------*/
+
+const app = require('express')
+const express = app();
+
+express.get('/',(req,res)=>{
+    res.sendFile('./element.html');
+});
+
+express.listen(3000);
 
